@@ -1,3 +1,11 @@
+testFake:
+    stage: test
+    only:
+        variables:
+            - $JOB_NAME == "never use"
+    script: 
+        - echo "dont delete this stage! this is a pattern for your suite, copy and put your tests bellow" 
+
 testSuite:
     stage: test
     only:
