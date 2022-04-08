@@ -1,11 +1,3 @@
-image: mcr.microsoft.com/dotnet/sdk:latest
-
-build:
-    stage: build
-    script:
-        - hwclock
-        - dotnet build
-
 testSuite:
     stage: test
     only:
