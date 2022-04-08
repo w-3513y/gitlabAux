@@ -1,0 +1,16 @@
+image: mcr.microsoft.com/dotnet/sdk:latest
+
+build:
+    stage: build
+    script:
+        - hwclock
+        - dotnet build
+
+testSuite:
+    stage: test
+    only:
+        variables:
+            - $JOB_NAME == "suite"
+    script: 
+        - hwclock
+        - dotnet test
