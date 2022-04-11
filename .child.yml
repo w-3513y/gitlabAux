@@ -32,3 +32,12 @@ testSuite3:
     script: 
         - hwclock
         - dotnet test
+        
+testSuite4:
+    stage: test
+    only:
+        variables:
+            - $JOB_NAME == "suite4"
+    script: 
+        - hwclock
+        - dotnet test
